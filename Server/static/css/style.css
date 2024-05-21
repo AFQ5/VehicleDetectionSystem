@@ -1,0 +1,200 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100vh; /* Use vh for full viewport height */
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  background-color: #a3a2a2;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Distribute content horizontally */
+  align-items: center; /* Align content vertically */
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #343434;
+  color: #a2e9da;
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff; /* White text color */
+}
+
+.navbar nav {
+  display: flex; /* Enable flexbox for navigation links */
+}
+
+.navbar nav ul {
+  list-style: none; /* Remove default bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+.navbar nav li {
+  margin-right: 20px; /* Add spacing between links */
+}
+
+.navbar nav a {
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit color from parent element */
+}
+
+.navbar nav a:hover {
+  color: #0dbdee; /* Change link color on hover */
+}
+
+/* Map Section Styles */
+.Map {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+}
+
+svg {
+  width: 500px; /* Fills viewport width */
+  height: 367px; /* Fills viewport height */
+  zoom: 2.5;
+}
+
+.spot {
+  fill: #4f8f52;
+  stroke: #000;
+  stroke-width: 0.5;
+  width: 10px;
+  height: 19px;
+  margin: 0 auto;
+}
+
+#roadPath {
+  fill: #2e2e2e; /* Light green fill */
+  fill-opacity: 0.55; /* 55% opacity */
+  stroke: #000;
+  stroke-width: 1;
+}
+
+#entry-exit {
+  width: 21px;
+  height: 50px;
+  fill: #8abf10;
+  stroke: #000;
+  stroke-width: 0.5;
+}
+
+#entry-exit:hover {
+  fill: #aff017;
+  stroke: #343434;
+}
+
+#sidewalkOutline,
+#sidewalkMiddle1,
+#sidewalkMiddle2,
+#gatePath {
+  fill: #000000; /* Red fill */
+  fill-opacity: 0.5; /* 50% opacity */
+  stroke: #000;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #212121;
+  color: #ffffff;
+}
+
+/* Increase zoom for viewports wider than 1000px and taller than 831px */
+@media (min-width: 1000px) or (min-height: 831px) {
+  svg {
+    zoom: 3;
+  }
+}
+
+/* Adjust the zoom based on larger viewports dynamically */
+@media (min-width: 1200px) {
+  svg {
+    zoom: 4;
+  }
+}
+
+/* Additional Styles */
+.content {
+  padding: 20px;
+}
+
+.analysis {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.stats {
+  background-color: #fff;
+  padding: 1rem 8rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.stats h2 {
+  margin-top: 0;
+}
+
+.chart-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.chart {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex: 1 1 300px; /* Flex-grow, flex-shrink, and flex-basis */
+  max-width: 45%; /* Ensure the charts don't get too wide */
+}
+
+.chart img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

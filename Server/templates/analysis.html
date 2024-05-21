@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parking Analysis</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Link to external CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <!-- Link to external JavaScript file -->
+    <script src="{{ url_for('static', filename='js/analysis.js') }}"></script>
+  </head>
+  <body onload="fetchAnalysisData()">
+    <!-- Navigation Bar -->
+    <header class="navbar">
+      <div class="brand">SAY!</div>
+      <h1>Parking Analysis</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content: Analysis Section -->
+    <section class="analysis">
+      <!-- Parking Statistics -->
+      <div class="stats" id="stats">
+        <h2>Parking Statistics</h2>
+        <p>Total Spots: <span id="totalSpots"></span></p>
+        <p>Occupied Spots: <span id="occupiedSpots"></span></p>
+        <p>Free Spots: <span id="freeSpots"></span></p>
+        <p id="occupancyRate"></p>
+      </div>
+      <!-- Charts Row 1 -->
+      <div class="chart-row">
+        <div class="chart">
+          <h2>Occupancy Rate</h2>
+          <img id="occupancyRateChart" src="" alt="Occupancy Rate Chart" />
+        </div>
+        <div class="chart">
+          <h2>Section-wise Occupancy</h2>
+          <img
+            id="sectionOccupancyChart"
+            src=""
+            alt="Section-wise Occupancy Chart"
+          />
+        </div>
+        <div class="chart">
+          <h2>Occupancy by Day of the Week</h2>
+          <img
+            id="dayOfWeekChart"
+            src=""
+            alt="Occupancy by Day of the Week Chart"
+          />
+        </div>
+      </div>
+      <!-- Charts Row 2 -->
+      <div class="chart-row">
+        <div class="chart">
+          <h2>Occupancy Over Time</h2>
+          <img
+            id="occupancyOverTimeChart"
+            src=""
+            alt="Occupancy Over Time Chart"
+          />
+        </div>
+        <div class="chart">
+          <h2>Duration of Occupancy</h2>
+          <img
+            id="durationHistogramChart"
+            src=""
+            alt="Duration of Occupancy Histogram"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 SAY! Parking. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

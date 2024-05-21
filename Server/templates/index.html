@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parking Map</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="brand">SAY!</div>
+      <h1>Parking Map</h1>
+      <nav>
+        <ul>
+          <li><a href="/analysis-page">Show Analysis</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="Map">
+      <svg
+        id="parkingMap"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+      >
+        <!-- section "A" -->
+        <g id="section-A">
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <!-- end of section "A" -->
+        </g>
+
+        <!-- section "B1" -->
+        <g id="section-B1">
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <!-- end of section "B1" -->
+        </g>
+
+        <!-- section "B2" -->
+        <g id="section-B2">
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <!-- end of section "B2" -->
+        </g>
+
+        <!-- section "C1" -->
+        <g id="section-C1">
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <!-- end of section "C1" -->
+        </g>
+
+        <!-- section "C2" -->
+        <g id="section-C2">
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <!-- end of section "C2" -->
+        </g>
+
+        <!-- section " D " -->
+        <g id="section-D">
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <!-- end of section "D" -->
+        </g>
+
+        <!-- section "E" -->
+        <!-- اللي نحتاجه -->
+        <g id="section-E">
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <rect class="spot" />
+          <!-- end of section "E" -->
+        </g>
+
+        <g id="Road">
+          <path
+            id="roadPath"
+            d="M91 10.5H121V59L122.5 101.5H167.5V41.5H188V101.5H345.5V40H361.5V101.5H421L422.5 10H439.5L440.5 303V315.5V321.5L441.5 328L442.5 334L445 341L449 351L451.5 356.5L446 359L436.5 361L435 360.5L432 354L429.5 347.5L426 338L423.5 324.5L422.5 308.5V303V295V288.5V282V276.5V122.5H392V342.5H373.5V309.5V215V122.5H113.5V157.5V192H373.5V215H248H113.5V287H248H373.5V309.5H231.5H91V105Z"
+          />
+        </g>
+
+        <g id="Gate">
+          <path
+            id="gatePath"
+            d="M395 141.5L398.507 136L405.521 134L412.535 135.5L416.543 139L419.048 144V180.5L416.543 187L412.535 189L407.5 190.5L400.511 189L396.503 185L395 180V141.5Z"
+          />
+          <rect id="entry-exit" />
+        </g>
+
+        <g id="Sidewalk">
+          <path
+            id="sidewalkOutline"
+            d="M0 0H132.694H161.428H197.474H501L499 368.859L498.218 368.8L490.552 368.22L479.5 367.384L470 366.665L462.341 362.812L455.55 356.766L451.893 349.375L449.803 341.984L447.713 331.906L445.624 315.109V293.609V245.906V198.203V101.453V3.35938H418.458V84.6562H362.559V36.2812H344.274V84.6562H339.572V47.7031H197.474V84.6562H192.773V38.2969H164.562V90.0313L161.428 92.7188L147.5 90.0313L137 80.5L131 70.5L128 57.5V31.5V3.35938H88.2888V74.5781H61.6455V293.609H85.6768V315.109H189.5H291.51V349.375H368.828V315.109H371.962V356.766H401.74V337.953V225.078H406V195H411V225.078H415.846V259.344V276.812L416.368 293.609L417.5 316L419 327L421.5 337.953L425.5 353.5L429 361.5L433.386 364.115L442.5 367.475L453 367.732L460 367.904L467.5 368.087L470 366.665L482.5 367.611L490.552 368.22L499 368.859L401.74 366.476H296H148.5H0V0Z"
+          />
+          <path
+            id="sidewalkMiddle1"
+            d="M119 224L123.008 221L127.016 220L132.026 221L136.034 224V247L358.478 248.5V228.5L359.981 226L363.989 225.5L367.997 226L369.5 228.5V248.5V253V276.5L367.997 279L363.488 280L359.981 279L358.478 276.5V253L136.034 251.5V275L132.026 278H127.016H123.008L119 275V224Z"
+          />
+          <path
+            id="sidewalkMiddle2"
+            d="M119 134L123.008 131L127.016 130L132.026 131L136.034 134V157L358.478 158.5V138.5L359.981 136L363.989 135.5L367.997 136L369.5 138.5V158.5V163V186.5L367.997 189L363.488 190L359.981 189L358.478 186.5V163L136.034 161.5V185L132.026 188H127.016H123.008L119 185V134Z"
+          />
+        </g>
+      </svg>
+    </section>
+    <footer>
+      <p>&copy; 2024 SAY! Parking. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
